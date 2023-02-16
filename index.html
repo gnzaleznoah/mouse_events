@@ -12,14 +12,18 @@
         <script defer>
             //alert('hello')
             //get user input
-            const age = prompt('Enter age: ');
+            const age = prompt("Enter age: ");
 
             //check age
-            if (age >= 21){
+            if (age > 21){
                 alert ('21 or over');
+            }
+            else if (age == 21){
+                document.body.style.backgroundColor = "red";              
             }
             else{
                 alert ('not old enough');
+                window.location = "https://google.com";
             }
    </script>
     
