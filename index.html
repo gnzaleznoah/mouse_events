@@ -1,55 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab3: Conditions, Arrays, Events</title>
-    <style>
-        .box {
-            height:50px;
-            width:50px;
-            border:3px solid black;
-            transition: all 2s ease-out;
-        }
-    
-        .move {
-            transform: translateX('300px');
-            background-color:blue;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>CodePen - Mouse Events: mousedown event location</title>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <h1>Lab 3</h1>
-    <button id="click">Move box</button>
-    <div class="box"></div>
-
-        <script defer>
-            //make reference to butotn 
-            const mybutton = document.getElementById("click");
-
-            //create listener
-            mybutton.addEventListener("click",(e)=>{
-                const box = document.querySelector(".box");
-                box.classList.toggle('move');
-            });
-
-            //alert('hello')
-            //get user input
-            const age = prompt("Enter age: ");
-
-            //check age
-            if (age > 21){
-                alert ('21 or over');
-            }
-            else if (age == 21){
-                document.body.style.backgroundColor = "red";              
-            }
-            else{
-                alert ('not old enough');
-                window.location = "https://google.com";
-            }
-            
-   </script>    
+  <h1>Lab 4: Mouse Events</h1>
+  <div class="set-layout">
+    <div class="first">
+      <h2>Click Anywhere in the box to move the Object</h2>
+      <div id="ballBox">
+        <div id="dot"></div>
+      </div>
+    </div>
+    <div class="second">
+      <h2>Click inside box to view your clicking Location </h2>
+      <div class="dot-box">
+          <h3 id="point">0,0</h3>       
+      </div>
+    </div>
+    <div class="third">
+      <h2>Click Button below image to change Blend Mode</h2>
+      <figure class="blendpic">
+        <img class="noah" src="images/noah2.png" alt="noah">
+        <img class="athena" src="images/athena.png" alt="athena">
+      </figure>
+      <div class="buttons">
+        <button onclick="blendOne()">Multiply</button>
+        <button onclick="blendTwo()">Difference</button>
+        <button onclick="blendThree()">Screen</button>
+    </div>
+    </div>
+  </div>
+<script  src="./script.js"></script>
 </body>
 </html>
